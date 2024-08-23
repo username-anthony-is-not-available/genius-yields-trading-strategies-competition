@@ -31,8 +31,6 @@ class Candlestick:
         Raises:
             ValueError: If the input data is invalid or missing required fields.
         """
-        if not isinstance(candlestick_data, dict):
-            raise ValueError("data must be a dictionary")
 
         for field in self.REQUIRED_FIELDS:
             if field not in candlestick_data:
