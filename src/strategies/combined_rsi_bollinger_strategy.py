@@ -6,7 +6,7 @@ from typing import Dict, Optional
 from talipp.indicators import BB, RSI
 
 from api import Api
-from src.data_extraction.fear_and_greed_index_web_scraper import (
+from src.data_extraction.examples.fear_and_greed_index_web_scraper import (
     FearAndGreedIndexWebScraper,
 )
 from src.models.candlestick import Candlestick
@@ -148,7 +148,7 @@ class combined_rsi_bollinger_strategy:
         """
         if not self.use_fear_and_greed or self.fgis is None:
             return None
-        return self.fgis.get_index_value() or self.fear_and_greed_index_threshold
+        return self.fgis.get_value() or self.fear_and_greed_index_threshold
 
     def process_candle(self, candle: Candlestick) -> None:
         """

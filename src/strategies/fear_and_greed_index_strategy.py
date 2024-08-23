@@ -2,7 +2,7 @@ import logging
 from typing import Dict, Optional
 
 from api import Api
-from src.data_extraction.fear_and_greed_index_web_scraper import (
+from src.data_extraction.examples.fear_and_greed_index_web_scraper import (
     FearAndGreedIndexWebScraper,
 )
 from src.models.candlestick import Candlestick
@@ -75,7 +75,7 @@ class fear_and_greed_index_strategy:
         """
         try:
             self.logger.info("Executing Strategy...")
-            index_value = self.fgis.get_index_value()
+            index_value = self.fgis.get_value()
             if index_value:
                 self._process_index_value(index_value)
             else:
