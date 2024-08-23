@@ -6,7 +6,11 @@ import requests
 
 class GeniusYieldAPIScraper:
     """
-    A class to interact with the GeniusYield API for fetching and parsing kline data.
+    A class for interacting with the GeniusYield API to fetch and parse kline (candlestick) data.
+
+    This class demonstrates an alternative method for extracting financial data from internet sources,
+    specifically utilizing a RESTful API. It provides a structured approach to querying and processing
+    market data for cryptocurrency trading pairs.
 
     Attributes:
         base_url (str): The base URL for the GeniusYield API.
